@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML FORM</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <img
+          src="https://memorar.fot.br/images/company/memorar.fot.br.png"
+          alt="Memorar Logo"
+        />
+      </div>
+
+      <form>
+        <label for="name">
+          Let us know your name
+
+          <input
+            type="text"
+            id="name"
+            placeholder="Type your name..."
+            required
+          />
+        </label>
+
+        <label for="phoneNumber">
+          Please, Tell us your phone number
+
+          <input
+            type="number"
+            id="phoneNumber"
+            placeholder="Type your phone number..."
+            pattern="/^(\d{2})\D*(\d{5}|\d{4})\D*(\d{4})$/gm"
+            required
+          />
+        </label>
+
+        <label for="birthday">
+          When you were born
+
+          <input type="date" id="birthday" required />
+        </label>
+
+        <label for="email">
+          Now, tell us your e-mail
+
+          <input
+            type="email"
+            id="email"
+            placeholder="example@example.com"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            required
+          />
+        </label>
+
+        <label for="password">
+          It's time to choose a password
+
+          <input
+            type="password"
+            id="password"
+            placeholder="3xample@E"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$"
+            required
+          />
+        </label>
+
+        <small
+          >Your password must have at least 8 characters, which is 1 lowercase,
+          1 uppercase, 1 number and 1 symbol
+        </small>
+
+        <label for="confirm-password">
+          Please, confirm your password
+
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="*********"
+            pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$"
+            required
+          />
+        </label>
+
+        <label for="CPF">
+          Finally, type your CPF
+
+          <input
+            type="text"
+            id="CPF"
+            placeholder="123.456.789.00"
+            pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+            required
+          />
+        </label>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </body>
+</html>
