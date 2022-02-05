@@ -13,98 +13,104 @@
     />
   </head>
   <body>
-    <div>
+    <div class="container">
       <div>
         <img
           src="https://memorar.fot.br/images/company/memorar.fot.br.png"
           alt="Memorar Logo"
         />
+
+        <h1 class="h5 fw-bold">Crie sua conta na Memorar</h1>
       </div>
 
       <form>
-        <label for="name">
-          Let us know your name
-
+        <div class="form-floating mb-3">
           <input
+            class="form-control"
             type="text"
             id="name"
-            placeholder="Type your name..."
+            placeholder="Type your name"
             required
-          />
-        </label>
+          /><label for="name"> Let us know your name </label>
+        </div>
 
-        <label for="phoneNumber">
-          Please, Tell us your phone number
-
+        <div class="form-floating mb-3">
           <input
+            class="form-control"
             type="number"
             id="phoneNumber"
             placeholder="Type your phone number..."
             pattern="/^(\d{2})\D*(\d{5}|\d{4})\D*(\d{4})$/gm"
             required
-          />
-        </label>
+          /><label for="phoneNumber"> Please, Tell us your phone number</label>
+        </div>
 
-        <label for="birthday">
-          When you were born
-
-          <input type="date" id="birthday" required />
-        </label>
-
-        <label for="email">
-          Now, tell us your e-mail
-
+        <div class="form-floating mb-3">
           <input
+            class="form-control"
+            type="date"
+            id="birthday"
+            required
+          /><label for="birthday">When you were born</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            class="form-control"
             type="email"
             id="email"
             placeholder="example@example.com"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             required
-          />
-        </label>
+          /><label for="email">Tell us your e-mail</label>
+        </div>
 
-        <label for="password">
-          It's time to choose a password
-
+        <div class="form-floating mb-3">
           <input
+            class="form-control"
             type="password"
             id="password"
             placeholder="3xample@E"
             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$"
             required
           />
-        </label>
+          <label for="password">Choose a password</label>
+        </div>
 
-        <small
+        <!--
+          <small
           >Your password must have at least 8 characters, which is 1 lowercase,
           1 uppercase, 1 number and 1 symbol
         </small>
+        -->
 
-        <label for="confirm-password">
-          Please, confirm your password
-
+        <div class="form-floating mb-3">
           <input
+            class="form-control"
             type="password"
             id="confirm-password"
             placeholder="*********"
             pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$"
             required
-          />
-        </label>
+          /><label for="confirm-password">
+            Please, confirm your password
+          </label>
+        </div>
 
-        <label for="CPF">
-          Finally, type your CPF
-
+        <div class="form-floating mb-3">
           <input
+            class="form-control"
             type="text"
             id="CPF"
             placeholder="123.456.789.00"
             pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
             required
-          />
-        </label>
+          /><label for="CPF">Type your CPF</label>
+        </div>
 
-        <button type="submit">Send</button>
+        <button type="submit" class="btn btn-primary btn-lg">
+          Create Account
+        </button>
       </form>
     </div>
 
